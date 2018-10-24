@@ -1,0 +1,41 @@
+<!DOCTTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login and Registration</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand text-white">Login and Registration</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration">Registration</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="jumbotron jumbotron-fluid bg-light">
+                <h2 class="text-center">{{ welcome_message }}</h2>
+                <hr class="my-4">
+                <div class="row justify-content-center w-100 mb-2"> <!-- if session is active, don't display this -->
+                    <a href="/" class="btn btn-secondary ml-2">Home</a>
+                    <a href="/login" class="btn btn-secondary ml-2">Login</a>  <!-- if session is active, don't display this -->
+                    <a href="/registration" class="btn btn-secondary ml-2">Register</a>  <!-- if session is active, don't display this -->
+                    <a href="/logout" class="btn btn-danger ml-2">Logout</a> <!-- if session is active, display this --  Logout kills session-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
